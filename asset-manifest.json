@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.690e02d4.chunk.css",
-    "main.js": "/static/js/main.d4e6a8ce.chunk.js",
-    "main.js.map": "/static/js/main.d4e6a8ce.chunk.js.map",
-    "runtime~main.js": "/static/js/runtime~main.f980bcb1.js",
-    "runtime~main.js.map": "/static/js/runtime~main.f980bcb1.js.map",
-    "static/css/2.e8d046a2.chunk.css": "/static/css/2.e8d046a2.chunk.css",
-    "static/js/2.3a323c58.chunk.js": "/static/js/2.3a323c58.chunk.js",
-    "static/js/2.3a323c58.chunk.js.map": "/static/js/2.3a323c58.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.7a0b609f3afba1828e810c45d526a197.js": "/precache-manifest.7a0b609f3afba1828e810c45d526a197.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/2.e8d046a2.chunk.css.map": "/static/css/2.e8d046a2.chunk.css.map",
-    "static/css/main.690e02d4.chunk.css.map": "/static/css/main.690e02d4.chunk.css.map"
+    "main.css": "/react-sql-operation-function-builder/static/css/main.690e02d4.chunk.css",
+    "main.js": "/react-sql-operation-function-builder/static/js/main.f068bfd7.chunk.js",
+    "main.js.map": "/react-sql-operation-function-builder/static/js/main.f068bfd7.chunk.js.map",
+    "runtime~main.js": "/react-sql-operation-function-builder/static/js/runtime~main.20b5db33.js",
+    "runtime~main.js.map": "/react-sql-operation-function-builder/static/js/runtime~main.20b5db33.js.map",
+    "static/css/2.e8d046a2.chunk.css": "/react-sql-operation-function-builder/static/css/2.e8d046a2.chunk.css",
+    "static/js/2.cefb8ae4.chunk.js": "/react-sql-operation-function-builder/static/js/2.cefb8ae4.chunk.js",
+    "static/js/2.cefb8ae4.chunk.js.map": "/react-sql-operation-function-builder/static/js/2.cefb8ae4.chunk.js.map",
+    "index.html": "/react-sql-operation-function-builder/index.html",
+    "precache-manifest.ed17743b551e7eb5490f0901b097b2a9.js": "/react-sql-operation-function-builder/precache-manifest.ed17743b551e7eb5490f0901b097b2a9.js",
+    "service-worker.js": "/react-sql-operation-function-builder/service-worker.js",
+    "static/css/2.e8d046a2.chunk.css.map": "/react-sql-operation-function-builder/static/css/2.e8d046a2.chunk.css.map",
+    "static/css/main.690e02d4.chunk.css.map": "/react-sql-operation-function-builder/static/css/main.690e02d4.chunk.css.map"
   }
 }
