@@ -39,7 +39,7 @@ class Operation extends Component {
             options.push(<Option key={d.source_alias + '.' + d.name} >{d.name}</Option>)
         })
         this.state.variables.map(d => {
-            options.push(<Option key={'var.' + d.name} >{d.name}</Option>)
+            options.push(<Option key={'var.' + d.name + ' '} >{d.name}</Option>)
         })
         return options;
     }
@@ -346,7 +346,7 @@ class Operation extends Component {
                         <div className="text_align_center margin-top-10">
                             <Button className="margin-right-10" onClick={this.clearVal.bind(this)}><I18 tkey='Clear' /></Button>
                             <Popover
-                                content={<div><Input type='string' onChange={(e)=> this.setState({variableName: e.target.value})} value={this.state.variableName}/> <div className='text_align_right margin-top-10'><Button onClick={this.addVariable.bind(this)}><I18 tkey='Ok' /></Button></div></div>}
+                                content={<div><Input type='string' onChange={(e)=> this.setState({variableName: e.target.value.replace(/ /g,'')})} value={this.state.variableName}/> <div className='text_align_right margin-top-10'><Button onClick={this.addVariable.bind(this)}><I18 tkey='Ok' /></Button></div></div>}
                                 title="Variable name"
                                 trigger="click"
                                 visible={this.state.variableNameVisible}
@@ -375,14 +375,15 @@ class Operation extends Component {
                 reg =  new RegExp(dd.source_alias, 'g');
                 d = d.replace(reg, dd.source_name);
             })
-            while (d.search('var.') !== -1) {
-                this.state.variables.map(dd => {
-                    reg = new RegExp('var.'+dd.name, 'g');
-                    d = d.replace(reg, dd.value);
-                }) 
-            }
+
             value += d + ' ';
         })
+        while (value.search('var.') !== -1) {
+            this.state.variables.map(dd => {
+                reg = new RegExp('var.'+dd.name, 'g');
+                value = value.replace(reg, dd.value);
+            }) 
+        }
         return value
     }
     clearVal() {
@@ -396,7 +397,7 @@ class Operation extends Component {
                 if(this.validate()) {
                     let prevState = this.state;
                     prevState.variableNameVisible = false;
-                    prevState.variables.push({name:this.state.variableName, value: `(${this.getFinalStringValue(this.state.value)})`});
+                    prevState.variables.push({name:this.state.variableName + ' ', value: `(${this.getFinalStringValue(this.state.value)})`});
                     prevState.variableName = '';
                     prevState.value = [];
                     this.setState(prevState)
