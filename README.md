@@ -13,8 +13,8 @@ value = ''
 npm -i react-sql-operation-function-builder
 
 ```
-<!-- ## demo
-[Live demo](https://sojinantony01.github.io/react-sql-operation-function-builder/) -->
+## demo
+[Live demo](https://sojinantony01.github.io/react-sql-operation-function-builder/)
 
 
 

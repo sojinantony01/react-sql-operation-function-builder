@@ -16,9 +16,10 @@
     "deploy": "gh-pages -d build"
   },
   "keywords": [
-    "React sql operations",
-    "react sql function",
-    "react operations and function generator"
+    "React sql operations generator",
+    "react sql function generator",
+    "react operations and function generator",
+    "react operation and functions syntax generator"
   ],
   "author": "Sojin Antony",
   "license": "ISC",
@@ -26,6 +27,7 @@
     "type": "git",
     "url": "https://github.com/sojinantony01/react-sql-operation-function-builder.git"
   },
+  "homepage": "https://sojinantony01.github.io/react-sql-operation-function-builder",
   "devDependencies": {
     "@babel/cli": "^7.4.4",
     "@babel/runtime": "^7.5.1",
@@ -56,6 +58,7 @@
     ]
   },
   "dependencies": {
-    "antd": "^3.22.0"
+    "antd": "^3.22.0",
+    "gh-pages": "^2.1.1"
   }
 }
