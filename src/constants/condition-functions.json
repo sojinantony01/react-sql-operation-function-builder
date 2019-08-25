@@ -1,0 +1,28 @@
+ {
+    "numberFunctions" :  [
+                  {"name":"ROUND", "args":2},
+                  {"name":"ABS", "args":1},
+                  {"name":"POWER", "args":1}
+               ],
+    "stringFunctions" :[
+                  {"name":"SUBSTRING", "args":3},
+                  {"name":"TRIM", "args":1},
+                  {"name":"LEFT", "args":2},
+                  {"name":"RIGHT", "args":2},
+
+                  {"name":"CONCAT", "args":2}
+               ],
+      "dateFunctions" : [{"name":"CURDATE", "args":0}],
+    "allFunctions" :  [
+                  {"name":"ROUND", "args":2},
+                  {"name":"ABS", "args":1},
+                  {"name":"POWER", "args":2},
+                  {"name":"SUBSTRING", "args":3},
+                  {"name":"TRIM", "args":1},
+                  {"name":"LEFT", "args":2},
+                  {"name":"RIGHT", "args":2},
+                  {"name":"CONCAT", "args":2},
+                  {"name":"CURDATE", "args":0}
+               ]
+    
+ }
