@@ -1,0 +1,168 @@
+/*common.css*/
+
+
+.width-50-per {
+    width: 50%;
+}
+.margin-right-4per {
+    margin-right: 4%;
+}
+.display_inline_block {
+    display: inline-block;
+    vertical-align: top;
+}
+.w_100 {
+width: 100%;
+}
+.border-radius-0 {
+    border-radius: 0 !important;
+}
+.margin-bottom-10 {
+    margin-bottom:10px;
+}
+.text_align_center {
+    text-align: center;
+}
+.position_relative {
+    position: relative;
+}
+.padding-bottom-10 {
+    padding-bottom: 10px;
+}
+.padding-bottom-21 {
+    padding-bottom: 21px;
+}
+.width-46-per {
+    width: 46%;
+}
+.padding-5 {
+    padding: 5px;
+}
+.margin-top-10 {
+    margin-top: 10px;
+}
+.margin-right-10 {
+    margin-right: 10px;
+}
+.text_align_right {
+    text-align: right;
+}
+.width-115-px {
+    width: 115px;
+}
+.margin-top-5 {
+    margin-top: 5px;
+}
+.width-160-px {
+    width: 160px;
+}
+.padding-right-left-2-per {
+    padding-right: 2%;
+    padding-left: 2%;
+}
+.width-55-px {
+    width: 55px;
+}
+.width-110px {
+    width: 110px;
+}
+.width-100-px {
+    width: 100px;
+}
+.padding-right-4 {
+    padding-right: 4px;
+}
+.width-50-px {
+    width: 50px;
+}
+.width-60-px  {
+    width: 60px;
+}
+.margin-bottom-6 {
+    margin-bottom: 6px;
+}
+.margin-left-10 {
+    margin-left: 10px;
+}
+.width-35-px {
+    width: 35px;
+
+}
+.padding-left-8 {
+    padding-left: 8px;
+}
+.width-48-px {
+    width: 48px;
+}
+.margin-left-5 {
+    margin-left: 5px;
+}
+.width-125-px {
+    width: 125px;
+}
+.margin-right-7 {
+    margin-right: 7px;
+}
+.margin-left-5 {
+    margin-left: 5px;
+}
+.margin-right-5 {
+    margin-right: 5px;
+}
+/*common.css*/
+
+
+
+
+
+
+
+/* custom.css*/
+
+.action_sign_container {
+    border: 1px solid #ddd;
+    border-radius: 5px 5px 0 0;
+    text-align: center;
+    padding: 5px;
+}
+.operation_variable_container {
+    border: 1px solid #ddd;
+    border-radius: 0 0 5px 5px;
+    padding: 5px 0;
+    border-top: none
+}
+.user_invalid {
+    position: absolute;
+    top: 4px;
+    right: 20px;
+    font-size: 12px;
+    color: rgb(249, 104, 104);
+}
+.operation_formula_container {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 5px 0;
+    min-height: 242px;
+}
+.formula_head_container {
+    border-bottom: 1px solid #ddd;
+    padding: 5px;
+    text-align: center;
+}
+.operations_ops {
+    margin-right: 5px;
+    border: 1px solid #ddd;
+    background: none;
+    height: 34px;
+    width: 38px;
+    line-height: 35px;
+    text-align: center;
+    padding: 0!important;
+}
+.operation_formula_container button, .operation_variable_container button {
+    max-width: 100px;
+}
+.width-60-px .ant-input-number {
+    width: 60px;
+}
+/* custom.css*/

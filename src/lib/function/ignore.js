@@ -17,7 +17,7 @@ class Round extends Component {
       return (
       <div>
       <div className=" w_100">
-      <div className="width-50-px display_inline_block margin-top-5 padding-right-4px">
+      <div className="width-50-px display_inline_block margin-top-5 padding-right-4">
             <I18 tkey='Ignore ' />
             </div>
             <div className="width-60-px  display_inline_block margin-bottom-10">

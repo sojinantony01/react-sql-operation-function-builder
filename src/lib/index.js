@@ -13,6 +13,7 @@ import Absolute from './function/absolute';
 import Power from './function/power';
 import Concat from './function/concat';
 import 'antd/dist/antd.css';
+import './main.css';
 const Option = Select.Option
 const ops = ['+','-','*','/','(',')'];
 const operations = ['+','-','*','/','^']
@@ -275,7 +276,7 @@ class Operation extends Component {
                             <div className="container-fluid">    
                                 <label className=""><I18 tkey='Variable' /></label>
                                 <div className="row margin-bottom-10">
-                                    <div className="col-md-8">
+                                    <div className="col-md-8 col-sm-8">
                                         <Select 
                                             id="type"
                                             value={this.state.column}
@@ -287,17 +288,17 @@ class Operation extends Component {
                                             {this.getAttributes()}
                                         </Select>
                                     </div>
-                                    <div className="col-md-4 text_align_center">
+                                    <div className="col-md-4 col-md-4 text_align_center">
                                         <Button className="w_100" onClick={() => this.setState({value: this.getValue(this.state.column, 'val'), column:undefined})} ><I18 tkey='Add' /></Button>
                                     </div>
                                 </div> 
                                 <label><I18 tkey='Fixed' /></label>
                                 <div className="row">
-                                    <div className="col-md-8">
+                                    <div className="col-md-8 col-sm-8">
 
                                          <Input type='text' value={this.state.fixedVal} onChange={(e) => this.setState({fixedVal:e.target.value})} />
                                     </div>
-                                    <div className="col-md-4  text_align_center">
+                                    <div className="col-md-4 col-sm-4  text_align_center">
                                         <Button className="w_100" onClick={() => this.setState({value: this.getValue(this.state.fixedVal,'val'), fixedVal:undefined})} ><I18 tkey='Add' /></Button>      
                                     </div>
                                 </div>
@@ -309,7 +310,7 @@ class Operation extends Component {
                                 {this.state.invalidFuncArgs && <span className='user_invalid fixed_label' ><I18 tkey='Invalid function or arguments' /></span>}
                                 <label><I18 tkey='Function' /></label>
                                 <div className="row ">
-                                    <div className="col-md-8 padding-bottom-10 ">
+                                    <div className="col-md-8 col-sm-8 padding-bottom-10 ">
                                         <Select 
                                             id="type"
                                             value={this.state.func}
@@ -321,13 +322,13 @@ class Operation extends Component {
                                             {this.getFunctions()}
                                         </Select>
                                     </div>
-                                    <div className="col-md-4 padding-bottom-21">&nbsp;</div>
+                                    <div className="col-md-4 col-sm-4 padding-bottom-21">&nbsp;</div>
                                     <div className="container-fluid">
                                         
                                         {this.state.func &&this.getFunctionalArgsColumns()}
                                        
                                     </div>
-                                    <div className="col-md-offset-8 col-md-4 padding-bottom-10 text_align_center">                                 
+                                    <div className="col-md-offset-8 col-sm-offset-8 col-md-4 col-sm-4 padding-bottom-10 text_align_center">                                 
                                         <Button className="w_100" onClick={this.addFunction.bind(this)} ><I18 tkey='Add' /></Button>      
                                     </div>
                                   
@@ -335,7 +336,7 @@ class Operation extends Component {
                             </div>
                         </div>  
                     </div>           
-                    <div className='width-46-per'>
+                    <div className='width-46-per display_inline_block'>
                     <div className='w_100  operation_formula_container'>  
                         <div className="formula_head_container">
                             <label className='w_100' ><I18 tkey='Formula' /></label>
@@ -354,6 +355,7 @@ class Operation extends Component {
                                <Button><I18 tkey='Add as variable' /></Button>
                             </Popover>
                         </div>
+                        <Button onClick={this.onApply.bind(this)}><I18 tkey='Apply' /></Button>
                     </div>
                 </div>)
     }

@@ -23,7 +23,7 @@ class Round extends Component {
             <InputNumber  min={0} maxLength={8} className="" type='Number' onChange={(e) => this.props.onChange(e, 'params2')}/>
             </div>
             
-            <div className="width-110-px display_inline_block margin-top-5  margin-left-10 margin-bottom-10">
+            <div className="width-110-px display_inline_block margin-top-5  margin-left-10 margin-right-10 margin-bottom-10">
             <I18 tkey='characters from' />
             </div>
             
