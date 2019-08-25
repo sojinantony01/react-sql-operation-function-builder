@@ -24,7 +24,7 @@ class Operation extends Component {
         super(props);
         this.state = {
             value:[],
-            attributes: this.props.attributes,
+            attributes: this.props.attributes ? this.props.attributes : [],
             variables:[]
         };
     }
@@ -36,7 +36,7 @@ class Operation extends Component {
     getAttributes() {
         let options = []
         this.state.attributes.map(d => {
-            options.push(<Option key={d.source_alias + '.' + d.name} >{d.name + ' ('+ d.type + ')'}</Option>)
+            options.push(<Option key={d.source_alias + '.' + d.name} >{d.name}</Option>)
         })
         this.state.variables.map(d => {
             options.push(<Option key={'var.' + d.name} >{d.name}</Option>)
@@ -288,7 +288,7 @@ class Operation extends Component {
                                             {this.getAttributes()}
                                         </Select>
                                     </div>
-                                    <div className="col-md-4 col-md-4 text_align_center">
+                                    <div className="col-md-4 col-sm-4 text_align_center">
                                         <Button className="w_100" onClick={() => this.setState({value: this.getValue(this.state.column, 'val'), column:undefined})} ><I18 tkey='Add' /></Button>
                                     </div>
                                 </div> 
@@ -341,7 +341,7 @@ class Operation extends Component {
                         <div className="formula_head_container">
                             <label className='w_100' ><I18 tkey='Formula' /></label>
                         </div>
-                            <label className='w_100 padding-5' >{this.props.replace ? this.getStringValue(this.state.value) : this.state.value}</label>
+                            <label className='w_100 padding-5' >{this.getStringValue(this.state.value)}</label>
                         </div>
                         <div className="text_align_center margin-top-10">
                             <Button className="margin-right-10" onClick={this.clearVal.bind(this)}><I18 tkey='Clear' /></Button>
@@ -355,7 +355,7 @@ class Operation extends Component {
                                <Button><I18 tkey='Add as variable' /></Button>
                             </Popover>
                         </div>
-                        <Button onClick={this.onApply.bind(this)}><I18 tkey='Apply' /></Button>
+                        <Button className='apply_button' type='primary' onClick={this.onApply.bind(this)}><I18 tkey='Apply' /></Button>
                     </div>
                 </div>)
     }
@@ -375,6 +375,12 @@ class Operation extends Component {
                 reg =  new RegExp(dd.source_alias, 'g');
                 d = d.replace(reg, dd.source_name);
             })
+            while (d.search('var.') !== -1) {
+                this.state.variables.map(dd => {
+                    reg = new RegExp('var.'+dd.name, 'g');
+                    d = d.replace(reg, dd.value);
+                }) 
+            }
             value += d + ' ';
         })
         return value

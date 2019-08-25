@@ -165,4 +165,8 @@ width: 100%;
 .width-60-px .ant-input-number {
     width: 60px;
 }
+.apply_button {
+    float: right;
+    
+}
 /* custom.css*/

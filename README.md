@@ -1,6 +1,6 @@
 # react-sql-operation-function-builder
 
-Package helps you to generate simple and complex sql friendly operations and functions. you can use sql table columns and variables 
+Package helps you to generate simple and complex sql friendly operations and functions. Can use multiple sql table columns. also helps to build non sql syntax
 
 ## Getting Started
 
@@ -10,20 +10,17 @@ Make sure you have include bootstrap in your project
 value = ''
 ```
 ```
-npm react-sql-operation-function-builder
+npm -i react-sql-operation-function-builder
 
 ```
 <!-- ## demo
-[Live demo](https://sojinantony01.github.io/react-cron-generator/) -->
+[Live demo](https://sojinantony01.github.io/react-sql-operation-function-builder/) -->
 
-![alt text](https://raw.githubusercontent.com/sojinantony01/react31-31.png)
-
-![alt text](https://raw.githubusercontent.com/sojinantony01/reac1-57.png)
 
 
 ```
 import React, { Component } from 'react'
-import Operation from './lib'
+import Operation from 'react-sql-operation-function-builder'
 class App extends Component {
 
   constructor(props) {
@@ -34,27 +31,22 @@ class App extends Component {
   }
 
   render() {
-    return (<div>
+    return (<div className='col-md-8'>
       <Operation
-         replace={false}
-        //  type={this.getType(this.state.showOperation)}
-        //  onCancel={() => {this.setState({showOperation:false})}}
+         type={'ALL'}
          value={this.state.value}
-         attributes={this.getAttributesWithAlias([], 'A', 'a')}
-         onChange={(e) => this.setState({value:e})}/>
-                            
+         attributes={[
+                {name: 'col-1', source_alias: 'tab1', source_name:'tableOne'},
+                {name: 'col-2', source_alias: 'tab1', source_name:'tableOne'},
+                {name: 'column-1', source_alias: 'tab2', source_name:'tableTwo'}
+         ]}
+         onChange={(e) => {console.log('value', e); this.setState({value:e})}}/>               
     </div>)
-  }
-  getAttributesWithAlias(data,alias,name) {
-    data.map(d => {
-        d.source_alias = alias;
-        d.source_name = name
-    })
-    return data;
   }
 }
 
 export default App;
+
 
 
 ```
@@ -62,8 +54,11 @@ export default App;
 
 | Prop | Description | Default
 | --- | --- | -- |
-| value | syntax  |  |
+| value | syntax  | '' |
 | onChange |  |  |
+| type | type of functions ('STRING','NUMBER', 'DATE') | ALL |
+| attributes | table columns, can have multiple tables and columns, source name and source alias name is mandatory | [] |
+
  
 ## Acknowledgments
 *antd
