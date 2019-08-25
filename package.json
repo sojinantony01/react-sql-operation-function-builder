@@ -1,6 +1,6 @@
 {
   "name": "react-sql-operation-function-builder",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Helps to build sql friendly operations and functions ",
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -58,7 +58,6 @@
     ]
   },
   "dependencies": {
-    "antd": "^3.22.0",
-    "gh-pages": "^2.1.1"
+    "antd": "^3.22.0"
   }
 }

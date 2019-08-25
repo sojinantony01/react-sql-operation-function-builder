@@ -7,7 +7,7 @@ Package helps you to generate simple and complex sql friendly operations and fun
 Make sure you have include bootstrap in your project
 
 ```
-value = ''
+You can simply generate syntax like  POWER((Round(col-1) * 22) + ((col-2*10)/100))^2 
 ```
 ```
 npm -i react-sql-operation-function-builder
@@ -56,7 +56,7 @@ export default App;
 | --- | --- | -- |
 | value | syntax  | '' |
 | onChange |  |  |
-| type | type of functions ('STRING','NUMBER', 'DATE') | ALL |
+| type | type of functions ('STRING','NUMBER', 'DATE','ALL') | ALL |
 | attributes | table columns, can have multiple tables and columns, source name and source alias name is mandatory | [] |
 
  
