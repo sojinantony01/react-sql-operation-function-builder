@@ -1,6 +1,6 @@
 {
   "name": "react-sql-operation-function-builder",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Helps to build sql friendly operations and functions ",
   "main": "dist/index.js",
   "module": "dist/index.js",

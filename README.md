@@ -4,7 +4,8 @@ Package helps you to generate simple and complex sql friendly operations and fun
 
 ## Getting Started
 
-Make sure you have include bootstrap in your project
+Make sure you have include bootstrap in your project.
+
 You can simply generate syntax like
 ```
   POWER((Round(col-1) * 22) + ((col-2*10)/100), 2) 
