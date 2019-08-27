@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import I18,{i18Get} from '../i18';
-import utils from '../utils/utils';
+import I18,{i18Get} from './i18';
+import utils from './utils/utils';
 import {Select, Button, Input, Popover } from 'antd'
-import constants from '../constants/condition-functions.json';
+import constants from './constants/condition-functions.json';
 import Round from './function/round'
 import Left from './function/left';
 import Right from './function/right';

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
-import I18,{i18Get} from '../../i18';
-import utils from '../../utils/utils';
+import I18,{i18Get} from '../i18';
+import utils from '../utils/utils';
 import { Select, Input } from 'antd';
 
 class Round extends Component {
