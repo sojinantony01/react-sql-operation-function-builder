@@ -40,7 +40,7 @@
   "peerDependencies": {
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "antd": "^3.22.0"
+    "antd": "^6.3.1"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -58,6 +58,6 @@
     ]
   },
   "dependencies": {
-    "antd": "^3.22.0"
+    "antd": "^6.3.1"
   }
 }
